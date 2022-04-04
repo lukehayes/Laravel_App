@@ -23,7 +23,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        //
+        return view('FormController/create');
     }
 
     /**
@@ -34,7 +34,8 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dump($request);
+        dump($request->name);
     }
 
     /**
