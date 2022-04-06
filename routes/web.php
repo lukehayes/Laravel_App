@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,5 @@ use App\Http\Controllers\FormController;
 
 Route::get('/', [FormController::class, 'index']);
 Route::get('/create', [FormController::class, 'create']);
-Route::post('/create', [FormController::class, 'store']);
+
+Route::resource('books', BookController::class);
