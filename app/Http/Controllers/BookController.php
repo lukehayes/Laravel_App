@@ -38,7 +38,11 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        dd("Died");
+        $book = new Book();
+        $book->title = $request->title;
+        $book->language = $request->language;
+
+        $book->save();
     }
 
     /**
