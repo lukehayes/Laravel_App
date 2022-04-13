@@ -90,10 +90,8 @@ class BookController extends Controller
     public function destroy($id)
     {
         $book = Book::find($id);
-        $book->destroy();
+        $book->delete();
 
-        dd($book);
-
-        return redirect()->route('book.index');
+        return redirect()->route('books.index');
     }
 }
