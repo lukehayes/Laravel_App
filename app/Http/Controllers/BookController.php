@@ -53,7 +53,9 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        //
+        $book = Book::findOrFail($id);
+        return view('Books/show')
+               ->with('book', $book);
     }
 
     /**
@@ -87,6 +89,11 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $book = Book::find($id);
+        $book->destroy();
+
+        dd($book);
+
+        return redirect()->route('book.index');
     }
 }
