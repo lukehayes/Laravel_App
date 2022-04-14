@@ -10,20 +10,33 @@
  
 @section('content')
 
-    @foreach($books as $book)
-        <div class="book">
-            {{ $book->title }}
-            <span style="font-weight: bold;">{{ $book->language }}</span>
-            <div class="options" style='display: inline;'>
-                <a href="{{ route('books.show', [$book->id]) }}">Show</a>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Langauage</th>
+            <th>Show</th>
+            <th>Delete</th>
+        </tr>
 
+    @foreach($books as $book)
+
+        <tr>
+            <td>{{$book->title}}</td>
+            <td>{{$book->language}}</td>
+
+            <td>
+                <a href="{{ route('books.show', [$book->id]) }}">Show</a>
+            </td>
+
+            <td>
                 <form action="{{ route('books.destroy', $book->id)}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <input type="submit" value="Delete">
                 </form>
+            </td>
+        </tr>
 
-            </div>
-        </div>
     @endforeach()
+        </table>
 @endsection
