@@ -20,6 +20,11 @@ class BookSeeder extends Seeder
         $this->buildBook("Eloquent Ruby", "Ruby");
         $this->buildBook("PHP Master", "PHP");
         $this->buildBook("Programming Rust", "Rust");
+
+        for($i = 0; $i <=10; $i++)
+        {
+            $this->buildBook("Delete Me {$i}", "No Language");
+        }
     }
 
     private function buildBook(string $title, string $language)
