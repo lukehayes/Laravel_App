@@ -10,6 +10,16 @@ class Book extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = array(
+        'created_by_user_id',
+        'updated_by_user_id',
+        'id',
+        'title',
+        'language_id',
+        // The rest of the column names that you want it to be mass-assignable.
+    );
+
     public function language()
     {
         return $this->hasOne(Language::class);

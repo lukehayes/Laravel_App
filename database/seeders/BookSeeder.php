@@ -15,11 +15,11 @@ class BookSeeder extends Seeder
      */
     public function run()
     {
-        $this->buildBook("Effective C++", "C++");
-        $this->buildBook("C++ Primer", "C++");
-        $this->buildBook("Eloquent Ruby", "Ruby");
-        $this->buildBook("PHP Master", "PHP");
-        $this->buildBook("Programming Rust", "Rust");
+        $this->buildBook("Effective C++");
+        $this->buildBook("C++ Primer");
+        $this->buildBook("Eloquent Ruby");
+        $this->buildBook("PHP Master");
+        $this->buildBook("Programming Rust");
 
         for($i = 0; $i <=10; $i++)
         {
@@ -27,11 +27,11 @@ class BookSeeder extends Seeder
         }
     }
 
-    private function buildBook(string $title, string $language)
+    private function buildBook(string $title)
     {
         $book = new Book();
         $book->title = $title;
-        $book->language = $language;
+        $book->language_id = rand(1,6);
         $book->save();
     }
 }

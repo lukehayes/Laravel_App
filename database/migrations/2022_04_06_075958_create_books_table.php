@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('language');
             $table->unsignedBigInteger('language_id');
             $table->foreign('language_id')->references('id')->on('languages');
 
