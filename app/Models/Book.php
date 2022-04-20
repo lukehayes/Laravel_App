@@ -22,6 +22,6 @@ class Book extends Model
 
     public function language()
     {
-        return $this->hasOne(Language::class);
+        return $this->belongsTo(Language::class);
     }
 }
