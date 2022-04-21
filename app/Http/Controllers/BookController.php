@@ -15,7 +15,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::all();
-        //dump($books);
+
         return view('Books/index')
                ->with('books', $books);
     }
@@ -27,7 +27,9 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('Books/create');
+        $languages = Language::all();
+        return view('Books/create')
+               ->with('languages', $languages);
     }
 
     /**

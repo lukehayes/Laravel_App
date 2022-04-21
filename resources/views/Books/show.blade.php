@@ -12,7 +12,7 @@
 
 <div class="book">
     {{ $book->title }}
-    {{ $book->language }}
+    {{ $book->language->language }}
 </div>
 
 

@@ -12,8 +12,18 @@
     
 <form action="{{route('books.store')}}" method="POST">
     @csrf
-    <input type="text" placeholder="title" name="title">
-    <input type="text" placeholder="language" name="language">
+
+    <label for="title">Title:
+        <input type="text" placeholder="title" name="title">
+    </label>
+
+    <label for="Lanauge">Language: </label>
+    <select name="language" id="language">
+    @foreach($languages as $language)
+      <option value="{{$language->language}}">{{$language->language}}</option>
+    @endforeach()
+    </select>
+
     <input type="submit" value="Create New Book">
 </form>
 
