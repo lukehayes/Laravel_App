@@ -2,6 +2,8 @@
     <head>
         <title>App Name - @yield('title')</title>
         <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
+
+        <script src="{{ mix('js/app.js') }}"></script>
     </head>
     <body>
 
@@ -9,6 +11,9 @@
             <a href="{{ route('books.index')}}">Books</a>
             <a href="{{ route('books.create')}}">New Book</a>
         </nav>
+
+
+       <div id="app">Vue Instance</div>
 
         @section('sidebar')
             This is the master sidebar.
