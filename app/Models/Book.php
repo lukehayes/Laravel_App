@@ -10,7 +10,6 @@ class Book extends Model
 {
     use HasFactory;
 
-
     protected $fillable = array(
         'created_by_user_id',
         'updated_by_user_id',
