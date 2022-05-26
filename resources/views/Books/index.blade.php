@@ -23,7 +23,7 @@
 
         <tr>
             <td>{{$book->title}}</td>
-            <td>{{$book->language->language}}</td>
+            <td>{{$book->language}}</td>
 
             <td>
                 <a href="{{ route('books.show', [$book->id]) }}">Show</a>

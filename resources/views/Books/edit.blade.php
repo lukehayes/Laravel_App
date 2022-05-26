@@ -19,7 +19,7 @@
     </label>
 
     <label for="Lanauge">Language: </label>
-    <select name="language" id="language" value="{{$book->language->language}}">
+    <select name="language" id="language" value="{{$book->language}}">
         @foreach($languages as $language)
           <option value="{{$language->language}}" >{{$language->language}}</option>
         @endforeach()

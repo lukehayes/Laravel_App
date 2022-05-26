@@ -22,5 +22,14 @@ class Book extends Model
     public function language()
     {
         return $this->belongsTo(Language::class);
+
+    /**
+     * Attribute so $book->language works correctly.
+     *
+     * @return int
+     */
+    public function getLanguageAttribute()
+    {
+        return $this->language_id;
     }
 }
