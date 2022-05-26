@@ -15,6 +15,7 @@
             <th>Title</th>
             <th>Langauage</th>
             <th>Show</th>
+            <th>Edit</th>
             <th>Delete</th>
         </tr>
 
@@ -26,6 +27,10 @@
 
             <td>
                 <a href="{{ route('books.show', [$book->id]) }}">Show</a>
+            </td>
+
+            <td>
+                <a href="{{ route('books.edit', [$book->id]) }}">Edit</a>
             </td>
 
             <td>
