@@ -85,7 +85,7 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd("Book Update");
     }
 
     /**

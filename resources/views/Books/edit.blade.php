@@ -10,7 +10,8 @@
 
 @section('content')
 
-<form action="{{route('books.store')}}" method="POST">
+<form action="{{route('books.update', [$book->id])}}" method="POST">
+    @method('PUT')
     @csrf
 
     <label for="title">Title:
