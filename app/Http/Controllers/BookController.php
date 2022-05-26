@@ -85,7 +85,13 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd("Book Update");
+        $book = Book::findOrFail($id);
+        $book->title = $request->title;
+
+        $language = Language::where($request->language,'=', $request->language)->firstOrFail();
+        $book->language_id = $language->id;
+
+        $book->save();
     }
 
     /**
