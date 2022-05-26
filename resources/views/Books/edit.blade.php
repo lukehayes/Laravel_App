@@ -25,7 +25,7 @@
         @endforeach()
     </select>
 
-    <input type="submit" value="Create New Book">
+    <input type="submit" value="Edit Book">
 </form>
 
 @endsection
