@@ -31,6 +31,8 @@ class Book extends Model
      */
     public function getLanguageAttribute()
     {
-        return $this->language_id;
+        // TODO There are better ways to do this but I want it to work first.
+        $language = Language::find($this->language_id);
+        return $language->language;
     }
 }
