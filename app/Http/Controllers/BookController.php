@@ -86,12 +86,11 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $book = Book::find($id);
-        $language = Language::where($request->language, $request->language)->first();
+        $language = Language::where("language", $request->language)->first();
+
         $book->title = $request->title;
         $book->language_id = $language->id;
 
-        //$language->language = $request->language;
-        //$language->save();
         $book->save();
         return redirect()->route('books.index');
     }
