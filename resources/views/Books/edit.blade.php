@@ -15,7 +15,7 @@
     @csrf
 
     <label for="title">Title:
-        <input type="text" placeholder="title" value="{{$book->title}}">
+        <input type="text" placeholder="title" value="{{$book->title}}" name="title">
     </label>
 
     <label for="Lanauge">Language: </label>
