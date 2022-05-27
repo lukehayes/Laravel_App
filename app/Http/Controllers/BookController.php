@@ -43,9 +43,12 @@ class BookController extends Controller
     {
         $book = new Book();
         $book->title = $request->title;
-        $book->language = $request->language;
-
+        $language = Language::where('language', $request->language)->first();
+        $book->language_id = $language->id;
         $book->save();
+
+        $request->session()->flash('status', "New book: {$request->title} has been created!");
+        return redirect()->route('books.index');
     }
 
     /**
@@ -92,6 +95,9 @@ class BookController extends Controller
         $book->language_id = $language->id;
 
         $book->save();
+
+        $request->session()->flash('status', 'The Book has been updated.');
+
         return redirect()->route('books.index');
     }
 

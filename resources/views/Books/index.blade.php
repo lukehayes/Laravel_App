@@ -10,6 +10,8 @@
  
 @section('content')
 
+    {{Session::get('status')}}
+
     <table>
         <tr>
             <th>Title</th>
