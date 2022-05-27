@@ -85,13 +85,15 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $book = Book::findOrFail($id);
+        $book = Book::find($id);
+        $language = Language::where($request->language, $request->language)->first();
         $book->title = $request->title;
-
-        $language = Language::where($request->language,'=', $request->language)->firstOrFail();
         $book->language_id = $language->id;
 
+        //$language->language = $request->language;
+        //$language->save();
         $book->save();
+        return redirect()->route('books.index');
     }
 
     /**
