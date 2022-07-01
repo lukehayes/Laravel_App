@@ -9,8 +9,10 @@
 @endsection
  
 @section('content')
-
-    {{Session::get('status')}}
+    
+    <div class="flash-message">
+        {{Session::get('status')}}
+    </div>
 
     <table>
         <tr>
