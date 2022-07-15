@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,22 @@ use App\Http\Controllers\BookController;
 |
 */
 
-Route::get('/', [FormController::class, 'index']);
-Route::get('/create', [FormController::class, 'create']);
+Route::get('/',          [FormController::class, 'index']);
+Route::get('/create',    [FormController::class, 'create']);
+Route::resource('books',  BookController::class);
 
-Route::resource('books', BookController::class);
+Route::get('/login',
+	    	[LoginController::class, 'index']
+			)->name('login-index');
+
+Route::post('/login',
+	    	[LoginController::class, 'authenticate']
+			)->name('login-authenticate');
+
+Route::get('/logout',
+	    	[LoginController::class, 'logout']
+			)->name('logout');
+
+Route::get('/dashboard',
+	    	[DashboardController::class, 'index']
+			)->name('dashboard-index');
