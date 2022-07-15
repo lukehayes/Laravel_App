@@ -10,7 +10,7 @@
 	
 	<main>
 		<div class="login-form">
-			<form action="{{route('login-authenticate')}}" method="POST">
+			<form action="{{route('login')}}" method="POST">
 				@csrf
 
 				@if ($errors->has('email'))

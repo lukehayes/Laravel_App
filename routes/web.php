@@ -35,4 +35,4 @@ Route::get('/logout',
 
 Route::get('/dashboard',
 	    	[DashboardController::class, 'index']
-			)->name('dashboard-index');
+			)->middleware('auth')->name('dashboard-index');
