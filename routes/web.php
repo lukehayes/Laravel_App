@@ -27,7 +27,7 @@ Route::get('/login',
 
 Route::post('/login',
 	    	[LoginController::class, 'authenticate']
-			)->name('login-authenticate');
+			)->name('login');
 
 Route::get('/logout',
 	    	[LoginController::class, 'logout']
