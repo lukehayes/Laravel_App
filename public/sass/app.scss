@@ -1,0 +1,13 @@
+
+@import "partials/login";
+@import "partials/dashboard";
+
+.flash-message
+{
+    background-color: #f4f5f7;
+    transition: all 0.2s;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
