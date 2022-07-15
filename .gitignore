@@ -263,4 +263,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+public/css
+
 # End of https://www.toptal.com/developers/gitignore/api/laravel,composer,phpunit,phpstorm,linux,windows,osx,vim
