@@ -5,6 +5,7 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/',          [FormController::class, 'index']);
+Route::get('/',          [FrontController::class, 'index']);
 Route::get('/create',    [FormController::class, 'create']);
 Route::resource('books',  BookController::class);
 
