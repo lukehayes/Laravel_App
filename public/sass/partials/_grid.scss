@@ -1,33 +1,37 @@
 $maxWidth: 1160px;
-$columns: 3;
 $grid-gap: 10px;
 
 .container
 {
+	background-color: #dadada;
+	max-width: $maxWidth;
+	margin: 0 auto;
+}
+
+.grid-container
+{
 	max-width: $maxWidth;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax($maxWidth/$columns, 1fr));
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
+	grid-column-gap: $grid-gap;
+	grid-row-gap: $grid-gap;
 }
-
 
 .grid-2
 {
-	@extend .container;
-	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 2)/2, 1fr));
+	@extend .grid-container;
+	grid-template-columns: repeat(auto-fit, minmax(calc(($maxWidth - $grid-gap * 2)/2), 1fr));
 }
 
 .grid-3
 {
-	@extend .container;
-	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 3)/3, 1fr));
+	@extend .grid-container;
+	grid-template-columns: repeat(auto-fit, minmax(calc(($maxWidth - $grid-gap * 3)/3), 1fr));
 }
 
 .grid-4
 {
-	@extend .container;
-	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 4)/4, 1fr));
+	@extend .grid-container;
+	grid-template-columns: repeat(auto-fit, minmax(calc(($maxWidth - $grid-gap * 4)/4), 1fr));
 }
 
