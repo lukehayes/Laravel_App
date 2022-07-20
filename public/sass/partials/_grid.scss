@@ -10,7 +10,6 @@ $grid-gap: 10px;
 	grid-template-columns: repeat(auto-fit, minmax($maxWidth/$columns, 1fr));
 	grid-column-gap: 10px;
 	grid-row-gap: 10px;
-	justify-items: center;
 }
 
 
@@ -22,7 +21,6 @@ $grid-gap: 10px;
 	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 2)/2, 1fr));
 	grid-column-gap: $grid-gap;
 	grid-row-gap: $grid-gap;
-	justify-items: center;
 }
 
 .grid-3
@@ -33,7 +31,6 @@ $grid-gap: 10px;
 	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 3)/3, 1fr));
 	grid-column-gap: $grid-gap;
 	grid-row-gap: $grid-gap;
-	justify-items: center;
 }
 
 .grid-4
@@ -44,6 +41,5 @@ $grid-gap: 10px;
 	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 4)/4, 1fr));
 	grid-column-gap: $grid-gap;
 	grid-row-gap: $grid-gap;
-	justify-items: center;
 }
 
