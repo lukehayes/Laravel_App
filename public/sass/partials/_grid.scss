@@ -1,0 +1,49 @@
+$maxWidth: 1160px;
+$columns: 3;
+$grid-gap: 10px;
+
+.container
+{
+	max-width: $maxWidth;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($maxWidth/$columns, 1fr));
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	justify-items: center;
+}
+
+
+.grid-2
+{
+	max-width: $maxWidth;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 2)/2, 1fr));
+	grid-column-gap: $grid-gap;
+	grid-row-gap: $grid-gap;
+	justify-items: center;
+}
+
+.grid-3
+{
+	max-width: $maxWidth;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 3)/3, 1fr));
+	grid-column-gap: $grid-gap;
+	grid-row-gap: $grid-gap;
+	justify-items: center;
+}
+
+.grid-4
+{
+	max-width: $maxWidth;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(($maxWidth - $grid-gap * 4)/4, 1fr));
+	grid-column-gap: $grid-gap;
+	grid-row-gap: $grid-gap;
+	justify-items: center;
+}
+
