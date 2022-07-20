@@ -9,7 +9,8 @@
 
 @section('content')
 	
-<div class="container">
+<div class="grid-container">
+<div class="grid-2">
 	<div class="content">
 		<p>Dolor fuga dolorem libero ab ea? Suscipit autem aliquid ullam similique aut. Ullam asperiores nobis quia repudiandae ratione eligendi Fugiat delectus itaque fugit voluptate deserunt. Ea nulla ullam placeat reiciendis!</p>
 	</div>
@@ -27,7 +28,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="grid-3">
 	<div class="content">
 		<p> Mauris accumsan scelerisque nunc, a sodales sem tincidunt eget. Maecenas scelerisque dolor dolor, id pharetra sapien convallis nec. Praesent sagittis dictum diam. Sed convallis ligula quis metus congue maximus. Nullam tristique velit sed nisl consectetur blandit. Mauris luctus est ac lectus varius, nec dictum dui ullamcorper. Nullam sed mollis arcu. In dui sapien, porta sit amet neque sit amet, gravida finibus tortor. Mauris et ipsum sed leo consectetur placerat. Suspendisse efficitur ipsum vel ultricies vehicula.
 Aenean ultrices venenatis auctor. Etiam luctus diam id consequat accumsan. Nulla venenatis, nunc ut congue gravida, magna eros mollis lectus, ac volutpat dui arcu et felis. Pellentesque et consectetur leo. Curabitur porttitor, dolor eget maximus dictum, erat lorem vestibulum ante, nec semper leo mi non odio. Vivamus eget eros consequat, elementum nisi vitae, finibus metus. Cras dictum aliquam elementum. In quis nibh odio. </p>
@@ -41,6 +42,7 @@ Aenean ultrices venenatis auctor. Etiam luctus diam id consequat accumsan. Nulla
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate erat nec augue varius euismod vel accumsan justo. Donec congue facilisis mi ac dignissim. Proin interdum, lectus non tincidunt consectetur, lectus nunc imperdiet justo, vitae posuere justo diam ac sapien. Mauris luctus laoreet erat, ut egestas dui auctor et. Vivamus porta justo a nulla ornare dapibus. Fusce dolor massa, aliquam quis sollicitudin quis, sollicitudin vitae quam. Sed dolor nulla, viverra in viverra non, congue a arcu. Nunc ornare purus non elit iaculis maximus. Mauris scelerisque nunc augue. </p>
 	</div>
 
+</div>
 </div>
 
 @endsection
