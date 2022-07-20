@@ -10,6 +10,12 @@
 @section('content')
 	
 <div class="grid-container">
+
+<nav>
+	<a href="{{ route('login-index') }}">Login</a>
+	<a href="{{ route('dashboard-index') }}">Dashboard</a>
+</nav>
+
 <div class="grid-2">
 	<div class="content">
 		<p>Dolor fuga dolorem libero ab ea? Suscipit autem aliquid ullam similique aut. Ullam asperiores nobis quia repudiandae ratione eligendi Fugiat delectus itaque fugit voluptate deserunt. Ea nulla ullam placeat reiciendis!</p>
