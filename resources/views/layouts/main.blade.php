@@ -3,8 +3,6 @@
         <title>App Name - @yield('title')</title>
         <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
-        <script src="{{ mix('js/app.js') }}"></script>
     </head>
     <body>
 
