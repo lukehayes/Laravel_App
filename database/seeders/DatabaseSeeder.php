@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             LanguageSeeder::class,
-            BookSeeder::class
+            BookSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
