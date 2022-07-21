@@ -21,7 +21,9 @@
 					</span>
 				@endif
 
-				<input type="text" placeholder="Email" name="email">
+				<label for="email">
+					<input type="text" placeholder="Email" name="email">
+				</label>
 
 
 				@if ($errors->has('password'))
@@ -30,7 +32,10 @@
 					</span>
 				@endif
 
-				<input type="password" placeholder="Password" name="password">
+				<label for="password">
+					<input type="password" placeholder="Password" name="password">
+				</label>
+
 				<input type="submit" value="login">
 			</form>
 		</div>
