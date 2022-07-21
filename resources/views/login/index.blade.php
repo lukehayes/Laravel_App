@@ -4,11 +4,14 @@
         <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
-    <body>
+    <body class="login-page">
 
 	
 	<main>
 		<div class="login-form">
+
+			<h4 class="title">Login</h4>
+
 			<form action="{{route('login')}}" method="POST">
 				@csrf
 
