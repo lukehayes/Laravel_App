@@ -10,7 +10,10 @@
 	<main>
 		<div class="login-form">
 
-			<h4 class="title">Login</h4>
+			<div class="greeting">
+				<h4 class="title">Hello, welcome back!</h4>
+				<p>Please enter your details.</p>
+			</div>
 
 			<form action="{{route('login')}}" method="POST">
 				@csrf
@@ -21,10 +24,12 @@
 					</span>
 				@endif
 
-				<label for="email">
-					<input type="text" placeholder="Email" name="email">
-				</label>
-
+				<div class="field">
+					<label class="label">Email</label>
+					<div class="control">
+						<input class="input" type="text" placeholder="Email">
+				  	</div>
+				</div>
 
 				@if ($errors->has('password'))
 					<span class="invalid-feedback">
@@ -32,11 +37,14 @@
 					</span>
 				@endif
 
-				<label for="password">
-					<input type="password" placeholder="Password" name="password">
-				</label>
+				<div class="field">
+					<label class="label">Password</label>
+					<div class="control">
+						<input class="input" type="password" placeholder="Password">
+				  	</div>
+				</div>
 
-				<input type="submit" value="login">
+				<input type="submit" value="Login">
 			</form>
 		</div>
 	</main>

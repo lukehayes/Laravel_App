@@ -1,13 +1,26 @@
 body.login-page
 {
-	.title
-	{
-		text-align: center;
-		padding-top: 30px;
-		font-size: 1.2rem;
-	}
 
 	background-color: $light-grey;
+	
+	.greeting
+	{
+		text-align: center;
+
+		.title
+		{
+			text-align: center;
+			padding-top: 30px;
+			font-size: 1.2rem;
+			margin-bottom: 0;
+		}
+
+		p 
+		{
+			font-size: 0.95rem;
+			color: $text-grey;
+		}
+	}
 
 	.login-form
 	{
