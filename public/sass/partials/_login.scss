@@ -31,12 +31,18 @@ body.login-page
 		margin-top: 130px;
 		border: 1px solid $dark-grey;
 
+		label
+		{
+			color: $text-grey;
+			font-size: 0.95rem;
+		}
+
 		input {
 			display: block;
 			width: 100%;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			font-size: 1.1rem;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			font-size: 1.0rem;
 		}
 
 		input[type="submit"]
